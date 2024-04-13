@@ -3,6 +3,7 @@ package com.selenium.project.interviewquestions;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -24,7 +25,7 @@ public class WebPageRefreshIQ {
 
 		WebDriver driver = new ChromeDriver();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 
 

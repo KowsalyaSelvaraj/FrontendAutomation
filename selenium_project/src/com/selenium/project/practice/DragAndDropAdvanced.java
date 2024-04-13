@@ -17,6 +17,7 @@ public class DragAndDropAdvanced {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 		
 		//Go to Drag and Drop page
 		driver.get("https://www.leafground.com/drag.xhtml");
@@ -33,7 +34,7 @@ public class DragAndDropAdvanced {
 		
 		
 		
-		driver.close(); 
+		driver.quit(); 
 	}
 
 }

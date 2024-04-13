@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 //import java.awt.Dimension;
 import java.awt.Rectangle;
@@ -33,7 +34,7 @@ public class GoogleSuggestionsIQ {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		Dimension dimension = new Dimension(1920,800);
 		driver.manage().window().setSize(dimension);;

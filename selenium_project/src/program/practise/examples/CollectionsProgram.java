@@ -13,7 +13,6 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 import org.apache.commons.io.input.SwappedDataInputStream;
-import org.apache.poi.util.TempFile;
 
 public class CollectionsProgram {
 

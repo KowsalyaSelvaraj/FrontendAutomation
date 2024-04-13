@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
@@ -35,7 +36,7 @@ public class ActiveElementIQ {
 		//chromeOptions.addArguments("--start-maximized");
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.navigate().to("https://www.google.com/");
 		
@@ -62,7 +63,7 @@ public class ActiveElementIQ {
 		FileHandler.copy(srcFile, destFile);
 		
 		
-		driver.quit();	
+		driver.close();	
 		
 		
 		

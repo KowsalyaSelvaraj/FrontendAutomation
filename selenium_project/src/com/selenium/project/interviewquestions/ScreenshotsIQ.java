@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.FileHandler;
 
@@ -35,7 +36,7 @@ public class ScreenshotsIQ {
 		
 		driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.navigate().to("https://www.leafground.com/alert.xhtml;jsessionid=node017fseuzt732a1r4v2kdasfpr1120314.node0");
 		

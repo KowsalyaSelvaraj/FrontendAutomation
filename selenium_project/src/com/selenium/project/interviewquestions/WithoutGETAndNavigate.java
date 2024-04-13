@@ -2,6 +2,7 @@ package com.selenium.project.interviewquestions;
 
 
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -28,7 +29,7 @@ public class WithoutGETAndNavigate {
 		Dimension dimension = new Dimension(960,1080);
 		driver.manage().window().setSize(dimension);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		

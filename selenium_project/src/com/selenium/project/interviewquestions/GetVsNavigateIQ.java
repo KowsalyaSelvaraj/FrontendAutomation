@@ -1,5 +1,6 @@
 package com.selenium.project.interviewquestions;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -22,7 +23,7 @@ public class GetVsNavigateIQ {
 		
 		driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get("https://www.google.com/");
 		WebElement searchboxElement =  driver.findElement(By.name("q"));

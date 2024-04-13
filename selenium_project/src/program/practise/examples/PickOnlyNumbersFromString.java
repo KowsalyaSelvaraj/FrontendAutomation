@@ -2,8 +2,6 @@ package program.practise.examples;
 
 import java.util.Scanner;
 
-import org.apache.poi.ss.format.CellNumberStringMod;
-
 public class PickOnlyNumbersFromString {
 
 	public void toGetNumber(String string)

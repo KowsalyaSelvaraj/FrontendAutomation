@@ -1,5 +1,6 @@
 package com.selenium.project.interviewquestions;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -27,7 +28,7 @@ public class UnderLineElementIQ {
 		
 		WebDriver driver = new ChromeDriver(options);
 		PageFactory.initElements(driver, UnderLineElementIQ.class);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.navigate().to("https://www.google.com/");
 		

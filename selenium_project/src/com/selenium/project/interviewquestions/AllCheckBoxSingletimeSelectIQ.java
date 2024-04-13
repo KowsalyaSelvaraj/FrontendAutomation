@@ -1,5 +1,6 @@
 package com.selenium.project.interviewquestions;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +24,7 @@ public class AllCheckBoxSingletimeSelectIQ {
 		
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.navigate().to("https://www.leafground.com/checkbox.xhtml;jsessionid=node0g1y7x4bej4fe1779sn2mexie7161609.node0");
 		

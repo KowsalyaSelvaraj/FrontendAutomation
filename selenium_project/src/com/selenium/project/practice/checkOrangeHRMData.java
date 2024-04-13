@@ -1,5 +1,6 @@
 package com.selenium.project.practice;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -11,13 +12,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class checkOrangeHRMData {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 
 		driver.findElement(By.name("username")).sendKeys("Admin");

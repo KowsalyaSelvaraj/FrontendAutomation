@@ -1,5 +1,7 @@
 package com.selenium.project.interviewquestions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +14,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class SeliniumExplicitWait {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 
 		WebDriverManager.chromedriver().setup();
 
@@ -22,8 +23,7 @@ public class SeliniumExplicitWait {
 
 		driver.navigate().to("https://phptravels.org/login");
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h6[@class='h3']")), "Login"));
 
 		WebElement emailAddressElement = driver.findElement(By.id("inputEmail"));

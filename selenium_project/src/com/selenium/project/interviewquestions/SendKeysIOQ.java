@@ -2,6 +2,7 @@ package com.selenium.project.interviewquestions;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -35,7 +36,7 @@ public class SendKeysIOQ {
 		
 		PageFactory.initElements(driver, SendKeysIOQ.class);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		

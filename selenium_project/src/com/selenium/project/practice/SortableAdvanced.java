@@ -1,5 +1,6 @@
 package com.selenium.project.practice;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -20,7 +21,7 @@ public class SortableAdvanced {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get("https://www.tutorialspoint.com/jqueryui/jqueryui_sortable.htm");
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath("(//b[contains(text(),'sortexample')])[1]"));

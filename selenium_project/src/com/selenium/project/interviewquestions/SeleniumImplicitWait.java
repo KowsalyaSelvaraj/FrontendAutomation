@@ -1,5 +1,6 @@
 package com.selenium.project.interviewquestions;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -20,7 +21,7 @@ public class SeleniumImplicitWait {
 		//open Chrome Driver
 		WebDriver driver = new ChromeDriver();
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.manage().window().maximize();
 
